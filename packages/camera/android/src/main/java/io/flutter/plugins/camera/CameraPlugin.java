@@ -588,7 +588,7 @@ public class CameraPlugin implements MethodCallHandler {
         final CaptureRequest.Builder captureBuilder =
             cameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_STILL_CAPTURE);
         captureBuilder.addTarget(pictureImageReader.getSurface());
-        captureBuilder.set(CaptureRequest.JPEG_ORIENTATION, getMediaOrientation());
+        captureBuilder.set(CaptureRequest.JPEG_ORIENTATION, 90);
 
         cameraCaptureSession.capture(
             captureBuilder.build(),
